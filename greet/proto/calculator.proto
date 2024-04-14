@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package calculator;
+
+option go_package = "calculator/proto";
+
+import "primes.proto";
+
+service CalculatorService {
+    rpc Primes (PrimeRequest) returns (stream PrimeResponse);
+}
