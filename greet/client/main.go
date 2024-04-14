@@ -5,6 +5,8 @@ import (
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
+
+	pb "gRPCgo/greet/proto"
 )
 
 var addr string = "localhost:50051"
@@ -15,4 +17,8 @@ func main() {
 		log.Fatalf("failed to listen on: %v \n", err)
 	}
 	defer conn.Close()
+
+	c := pb.NewGreetServiceClient(conn)
+
+	doGreet(c)
 }
