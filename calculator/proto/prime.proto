@@ -5,10 +5,10 @@ package calculator;
 option go_package = "calculator/proto";
 
 message PrimeRequest {
-    int32 number = 1;
+    int64 number = 1;
 }
 
 message PrimeResponse {
-    int32 result = 1;
+    int64 result = 1;
 }
 
