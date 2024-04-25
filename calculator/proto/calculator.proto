@@ -7,9 +7,11 @@ option go_package = "calculator/proto";
 import "sum.proto";
 import "prime.proto";
 import "avg.proto";
+import "max.proto";
 
 service CalculatorServices {
-    rpc Sum(SumRequest) returns (SumResponse);
-    rpc Primes(PrimeRequest) returns (stream PrimeResponse);
-    rpc Avg(stream AvgRequest) returns (AvgResponse);
+    rpc Sum (SumRequest) returns (SumResponse);
+    rpc Primes (PrimeRequest) returns (stream PrimeResponse);
+    rpc Avg (stream AvgRequest) returns (AvgResponse);
+    rpc Max (stream MaxRequest) returns (stream MaxResponse);
 }
