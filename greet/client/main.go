@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"time"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
@@ -23,5 +24,6 @@ func main() {
 	// doGreet(c) // unity
 	// doGreetManyTimes(c) // server_streaming
 	// doLongGreet(c) // client_streaming
-	doGreetEveryone(c) // bi-directional_streaming
+	// doGreetEveryone(c) // bi-directional_streaming
+	doGreetwithdeadline(c, 2*time.Second) // bi-directional_streaming
 }
