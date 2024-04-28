@@ -21,17 +21,12 @@ type Server struct {
 
 func main() {
 	// connecting to mongoDB
-	client, err := mongo.NewClient(options.Client().ApplyURI("mongodb://root:root@localhost:27017/"))
+	mongoDBClient, err := mongo.Connect(context.Background(), options.Client().ApplyURI("mongodb://root:root@localhost:27017/"))
 	if err != nil {
 		log.Fatalf("failed to connect to Mongo: %v \n", err)
 	}
 
-	_, err = mongo.Connect(context.Background())
-	if err != nil {
-		log.Fatalf("failed to connect to Mongo: %v \n", err)
-	}
-
-	collection = client.Database("blogDB").Collection("blog")
+	collection = mongoDBClient.Database("blogDB").Collection("blog")
 
 	// listening to gRPC
 	lis, err := net.Listen("tcp", addr)
