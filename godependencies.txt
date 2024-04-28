@@ -7,3 +7,6 @@
 
 - mongo
   go get go.mongodb.org/mongo-driver/mongo
+
+- dependencies
+  go mod tidy
