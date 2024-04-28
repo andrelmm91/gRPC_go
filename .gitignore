@@ -1,0 +1,5 @@
+bin
+*.crt
+*.key
+*.csr
+*.pem
