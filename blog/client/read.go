@@ -13,7 +13,7 @@ func readBlog(c pb.BlogServiceClient, id string) *pb.Blog {
 	res, err := c.ReadBlog(context.Background(), req)
 
 	if err != nil {
-		log.Fatalf("Unexpected error: %v\n", err)
+		log.Fatalf("Unexpected error while reading: %v\n", err)
 	}
 
 	log.Printf("Blog has been read: %s\n", res)

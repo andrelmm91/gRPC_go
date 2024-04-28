@@ -20,9 +20,11 @@ func main() {
 
 	c := pb.NewBlogServiceClient(conn)
 
-	// mocking creating a Blog
+	// // mocking creating a Blog
 	id := createBlog(c)
-	// mocking reading a Blog
-	readBlog(c, id)               //valid
-	readBlog(c, "aNonExistingId") //invalid
+	// // mocking reading a Blog
+	readBlog(c, id) //valid
+	// readBlog(c, "aNonExistingId") //invalid
+	// //mocking updating a Blog
+	updateBlog(c, id)
 }
