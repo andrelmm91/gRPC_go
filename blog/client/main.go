@@ -27,4 +27,6 @@ func main() {
 	// readBlog(c, "aNonExistingId") //invalid
 	// //mocking updating a Blog
 	updateBlog(c, id)
+	// //mocking listing all blogs
+	listBlog(c)
 }
