@@ -13,7 +13,7 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
-func (s *Server) Delete(ctx context.Context, in *pb.BlogId) (*emptypb.Empty, error) {
+func (s *Server) DeleteBlog(ctx context.Context, in *pb.BlogId) (*emptypb.Empty, error) {
 	log.Printf("Delete was invoked with %v\n", in)
 
 	oid, err := primitive.ObjectIDFromHex(in.Id)

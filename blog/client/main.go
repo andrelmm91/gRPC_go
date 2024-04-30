@@ -29,4 +29,6 @@ func main() {
 	updateBlog(c, id)
 	// //mocking listing all blogs
 	listBlog(c)
+	// // mocking deleting a blog
+	deleteBlog(c, id)
 }
